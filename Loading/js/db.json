@@ -1,0 +1,155 @@
+{
+    "style": [
+       {
+        "id": 1,
+        "content":  ".audio-effect1 {display: flex;justify-content: center;align-items: flex-end;gap: 5px;height: 60px;}.audio-effect1 div {display: inline-block;height: 60px;width: 5px;background-color: #fff;}.audio-effect1 div:nth-child(1) {animation: mix1 1s ease infinite 0s;}.audio-effect1 div:nth-child(2) {animation: mix2 1s ease infinite .1s;}.audio-effect1 div:nth-child(3) {animation: mix1 1s ease infinite .2s;}.audio-effect1 div:nth-child(4) {animation: mix2 1s ease infinite .3s;}.audio-effect1 div:nth-child(5) { animation: mix1 1s ease infinite .4s;}.audio-effect1 div:nth-child(6) {animation: mix2 1s ease infinite .5s;}.audio-effect1 div:nth-child(7) {animation: mix1 1s ease infinite .6s;}.audio-effect1 div:nth-child(8) {animation: mix2 1s ease infinite .8s;}@keyframes mix1 {0% {height: 60px;}50% {height: 20px;}100% {height: 60px;}}@keyframes mix2 {0% {height: 60px;}50% {height: 40px;}100% {height: 60px;}}"
+       },
+       {
+        "id": 2,
+        "content":  ".audio-effect2 {display: flex;justify-content: center;align-items: center;gap: 5px;height: 60px;}.audio-effect2 div {display: inline-block;height: 20px;width: 5px;background-color: #fff;}.effects2 {transform: scaleX(1);transition: all 600ms ease;}.adjacent {transform: scaleY(2);}.middle {transform: scaleY(3);}"
+       },
+       {
+        "id": 3,
+        "content":  ".audio-effect3 {display: flex;justify-content: center;align-items: center;gap: 5px;height: 60px;}.audio-effect3 div {display: inline-block;height: 20px;width: 5px;background-color: #fff;}.effects3 {transform: scaleX(1);transition: all 300ms ease;}.adjacent {transform: scaleY(2);}.middle {transform: scaleY(3);}"
+       },
+       {
+        "id": 4,
+        "content":  ".spin-effect4 {display: flex;justify-content: center;margin: 40px auto;}.spin-effect4 div { width: 40px;height: 40px;border: 5px solid #fff;border-radius: 50%;border-left-color: transparent;border-right-color: transparent;animation: spinner 1s ease-in-out infinite;}@keyframes spinner {0% {transform: rotate(0deg);}100% {transform: rotate(360deg);}}"
+       },
+       {
+        "id": 5,
+        "content":  ".spin-effect5 {display: flex;justify-content: center;margin: 40px auto;}.spin-effect5 div {width: 40px;height: 40px;border: 5px solid rgb(183, 183, 183);border-radius: 50%;border-top-color: white;animation: spinner2 1s linear infinite;}@keyframes spinner2 {0% {transform: rotate(0deg);}100% {transform: rotate(360deg);}}"
+       },
+       {
+        "id": 6,
+        "content":  ".spin-effect6 {display: inline-block;position: relative;width: 50px;height: 50px;left: 50%;transform: translateX(-50%);}.spin-effect6 div {box-sizing: border-box;display: block;position: absolute;width: 50px;height: 50px;border: 5px solid #fff;border-radius: 50%;animation: spin-effect6 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;border-color: #fff transparent transparent transparent;}.spin-effect6 div:nth-child(1) {animation-delay: -0.45s;}.spin-effect6 div:nth-child(2) {animation-delay: -0.3s;}.spin-effect6 div:nth-child(3) {animation-delay: -0.15s;}@keyframes spin-effect6 {0%{transform: rotate(0deg);}100%{transform: rotate(360deg);}}"
+       },
+       {
+        "id": 7,
+        "content":  ".spin-effect7 {display: inline-block;position: relative;width: 80px;height: 80px;left: 50%;transform: translateX(-50%);}.spin-effect7 div {animation: spin-effect7 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;transform-origin: 30px 30px;}.spin-effect7 div:after {content: '';display: block;position: absolute;width: 7px;height: 7px;border-radius: 50%;background: #fff;margin: -4px 0 0 -4px;}.spin-effect7 div:nth-child(1) {animation-delay: -0.036s;}.spin-effect7 div:nth-child(1):after {top: 51px;left: 53px;}.spin-effect7 div:nth-child(2) {animation-delay: -0.072s;}.spin-effect7 div:nth-child(2):after {top: 58px;left: 46px;}.spin-effect7 div:nth-child(3) {animation-delay: -0.108s;}.spin-effect7 div:nth-child(3):after {top: 61px;left: 38px;}.spin-effect7 div:nth-child(4) {animation-delay: -0.144s;}.spin-effect7 div:nth-child(4):after {top: 62px;left: 30px;}.spin-effect7 div:nth-child(5) {animation-delay: -0.18s;}.spin-effect7 div:nth-child(5):after {top: 61px;left: 22px;}.spin-effect7 div:nth-child(6) {animation-delay: -0.216s;}.spin-effect7 div:nth-child(6):after {top: 58px;left: 14px;}.spin-effect7 div:nth-child(7) {animation-delay: -0.252s;}.spin-effect7 div:nth-child(7):after {top: 53px;left: 7px;}.spin-effect7 div:nth-child(8) {animation-delay: -0.288s;}.spin-effect7 div:nth-child(8):after {top: 44px;left: 2px;}@keyframes spin-effect7 {0% {transform: rotate(0deg);}100% {transform: rotate(360deg);}}"
+       }
+    ],
+    "script": [
+        {
+            "id": 2,
+            "content":  "{let audioEffect2 = document.querySelector('.audio-effect2');let element2 = audioEffect2.querySelectorAll('div');let index2 = 0;setInterval (()=> {effects( element2);}, 200);function effects( arr) {let prev = index2 -1;let next2 = index2 +1;if (prev < 0) {prev = arr.length - 1;};if (next2 > arr.length -1) {next2 = 1;};if (index2 > arr.length -1) {index2 = 0;};arr.forEach(element2 => {element2.classList.remove('middle');element2.classList.remove('adjacent');});arr[prev].classList.add('adjacent');arr[index2].classList.add('middle'); arr[next2].classList.add('adjacent');++index2;};}"
+        },
+        {
+            "id": 3,
+            "content":  "{let audioEffect3 = document.querySelector('.audio-effect3');let element3 = audioEffect3.querySelectorAll('div');let index3 = 0;setInterval (()=> {effects( element3);}, 200);function effects( arr) {let prev3 = index3 -1;let next3 = index3 +1;if (prev3 < 0) {prev3 = arr.length - 1;};if (next3 > arr.length -1) {next3 = 1;};if (index3 > arr.length -1) {index3 = 0;};arr.forEach(element3 => {element3.classList.remove('middle');element3.classList.remove('adjacent');});arr[index3].classList.add('middle');++index3;};}"
+        }
+    ],
+    "item": 
+        [
+            {
+                "id": 1,
+                "title": "Audio",
+                "classname": "audio-effect1",
+                "childElement": [
+                    "<div></div>",
+                    "<div></div>",
+                    "<div></div>",
+                    "<div></div>",
+                    "<div></div>",
+                    "<div></div>",
+                    "<div></div>",
+                    "<div></div>"
+                ],
+                "source": ["html", "css"]
+                
+            },
+            {
+                "id": 2,
+                "title": "Audio",
+                "classname": "audio-effect2",
+                "childElement": [
+                    "<div class='effects2 middle'></div>",
+                    "<div class='effects2 adjacent'></div>",
+                    "<div class='effects2'></div>",
+                    "<div class='effects2'></div>",
+                    "<div class='effects2'></div>",
+                    "<div class='effects2'></div>",
+                    "<div class='effects2'></div>",
+                    "<div class='effects2'></div>",
+                    "<div class='effects2'></div>",
+                    "<div class='effects2'></div>",
+                    "<div class='effects2'></div>",
+                    "<div class='effects2 adjacent'></div>"
+                ],
+                "source": ["html", "css", "js"]
+                
+            },
+            {
+                "id": 3,
+                "title": "Audio",
+                "classname": "audio-effect3",
+                "childElement": [
+                    "<div class='effects3 middle'></div>",
+                    "<div class='effects3'></div>",
+                    "<div class='effects3'></div>",
+                    "<div class='effects3'></div>",
+                    "<div class='effects3'></div>",
+                    "<div class='effects3'></div>",
+                    "<div class='effects3'></div>",
+                    "<div class='effects3'></div>",
+                    "<div class='effects3'></div>",
+                    "<div class='effects3'></div>",
+                    "<div class='effects3'></div>",
+                    "<div class='effects3 adjacent'></div>"
+                ],
+                "source": ["html", "css", "js"]
+                
+            },
+            {
+                "id": 4,
+                "title": "Spin 1",
+                "classname": "spin-effect4",
+                "childElement": [
+                    "<div></div>"
+                ],
+                "source": ["html", "css"]
+                
+            },
+            {
+                "id": 5,
+                "title": "Spin 2",
+                "classname": "spin-effect5",
+                "childElement": [
+                    "<div></div>"
+                ],
+                "source": ["html", "css"]
+                
+            },
+            {
+                "id": 6,
+                "title": "Spin 3",
+                "classname": "spin-effect6",
+                "childElement": [
+                    "<div></div>",
+                    "<div></div>",
+                    "<div></div>",
+                    "<div></div>"
+                ],
+                "source": ["html", "css"]
+                
+            },
+            {
+                "id": 7,
+                "title": "Spin 4",
+                "classname": "spin-effect7",
+                "childElement": [
+                    "<div></div>",
+                    "<div></div>",
+                    "<div></div>",
+                    "<div></div>",
+                    "<div></div>",
+                    "<div></div>",
+                    "<div></div>",
+                    "<div></div>"
+                ],
+                "source": ["html", "css"]
+                
+            }
+        ]
+    
+}
