@@ -75,7 +75,7 @@
                     "<div></div>",
                     "<div></div>"
                 ],
-                "source": ["html", "css"],
+                "source": ["full", "html", "css"],
                 "framework": ["css", "tailwind"]
 
             },
@@ -97,7 +97,7 @@
                     "<div class='effects2'></div>",
                     "<div class='effects2 adjacent'></div>"
                 ],
-                "source": ["html", "css", "js"],
+                "source": ["full", "html", "css", "js"],
                 "framework": ["css", "tailwind"]
 
             },
@@ -119,7 +119,7 @@
                     "<div class='effects3'></div>",
                     "<div class='effects3 adjacent'></div>"
                 ],
-                "source": ["html", "css", "js"],
+                "source": ["full", "html", "css", "js"],
                 "framework": ["css", "tailwind"]
 
             },
@@ -130,7 +130,7 @@
                 "childElement": [
                     "<div></div>"
                 ],
-                "source": ["html", "css"],
+                "source": ["full", "html", "css"],
                 "framework": ["css", "tailwind"]
 
             },
@@ -141,7 +141,7 @@
                 "childElement": [
                     "<div></div>"
                 ],
-                "source": ["html", "css"],
+                "source": ["full", "html", "css"],
                 "framework": ["css", "tailwind"]
 
             },
@@ -155,7 +155,7 @@
                     "<div></div>",
                     "<div></div>"
                 ],
-                "source": ["html", "css"],
+                "source": ["full", "html", "css"],
                 "framework": ["css", "tailwind"]
 
             },
@@ -173,7 +173,7 @@
                     "<div></div>",
                     "<div></div>"
                 ],
-                "source": ["html", "css"],
+                "source": ["full", "html", "css"],
                 "framework": ["css", "tailwind"]
 
             },
@@ -195,7 +195,7 @@
                     "<div></div>",
                     "<div></div>"
                 ],
-                "source": ["html", "css"],
+                "source": ["full", "html", "css"],
                 "framework": ["css", "tailwind"]
 
             },
@@ -209,7 +209,7 @@
                     "<div></div>",
                     "<div></div>"
                 ],
-                "source": ["html", "css"],
+                "source": ["full", "html", "css"],
                 "framework": ["css", "tailwind"]
 
             },
@@ -220,7 +220,7 @@
                 "childElement": [
                     "<div></div>"
                 ],
-                "source": ["html", "css"],
+                "source": ["full", "html", "css"],
                 "framework": ["css", "tailwind"]
 
             },
@@ -242,7 +242,7 @@
                     "<div></div>",
                     "<div></div>"
                 ],
-                "source": ["html", "css"],
+                "source": ["full", "html", "css"],
                 "framework": ["css", "tailwind"]
 
             },
@@ -254,7 +254,7 @@
                     "<div></div>",
                     "<div></div>"
                 ],
-                "source": ["html", "css"],
+                "source": ["full", "html", "css"],
                 "framework": ["css", "tailwind"]
 
             }

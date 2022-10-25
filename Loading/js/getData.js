@@ -26,7 +26,9 @@ copyBtn.forEach((e)=> {
 // function get source code from database
 function getValueId(data, id, value, currentElement) {
     let filter;
-    
+    if (value   === "fullSource") {
+        getFullSource(data);
+    }
     if (value === "html") {
         let html = htmlToString(currentElement)
         copyText(html)
@@ -76,4 +78,7 @@ function newlineText(text, symbol) {
     return newText;
 }
 
+/get full source
+function getFullSource(data) {
 
+}
