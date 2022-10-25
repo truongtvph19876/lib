@@ -49,7 +49,7 @@ paste.addEventListener('click', function(){
     text.then(function(result){
         console.log(result);
     
-        textarea.innerText = result;
+        textarea.value = result;
     })
 });
 
