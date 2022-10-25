@@ -73,7 +73,6 @@ function newlineText(text, symbol) {
         }
         i++;
     }
-
     return newText;
 }
 

@@ -19,6 +19,9 @@ function effectRender(data) {
         let id = e.id
         return `
         <div class="item">
+            <select name="" id="" style="position: absolute; left:0;outline:none; border:none; border-radius: 2px;">
+            ${e.framework.map(e => `<option value="${e}" data-id="${e.id}">${e}</option>`).join("")}
+            </select>
             <div style="position: absolute; right:0;">
                 ${e.source.map(e => `<button class="copyBtn" data-id="${id}">${e}</button>`).join("")}
             </div>
