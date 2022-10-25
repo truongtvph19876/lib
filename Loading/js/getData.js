@@ -7,28 +7,18 @@ copyBtn.forEach((e)=> {
     let value = e.textContent;
     e.addEventListener("click", ()=>{
         let dataId = Number(e.getAttribute("data-id"));
-        
-        if (value === "html") {
-
-            getValueId(db, dataId, value, e)
-            
-        } else if (value ==="css") {
-            
-            getValueId(db, dataId, value, e)
-        } else if (value ==="js") {
-            
-            getValueId(db, dataId, value, e)
-        }
+        if (value === "full") {
+            copyText(newlineText(getFullSource(db, dataId, e)));
+        }else{
+            getValueId(db, dataId, value, e);
+        }      
     });
 })
-
 
 // function get source code from database
 function getValueId(data, id, value, currentElement) {
     let filter;
-    if (value   === "fullSource") {
-        getFullSource(data);
-    }
+
     if (value === "html") {
         let html = htmlToString(currentElement)
         copyText(html)
@@ -43,6 +33,8 @@ function getValueId(data, id, value, currentElement) {
             return e.id === id
         })
        
+    } else {
+        console.log("something is wrong");
     }
     try {
         copyText(newlineText(filter[0].content, ";"))
@@ -78,7 +70,22 @@ function newlineText(text, symbol) {
     return newText;
 }
 
-/get full source
-function getFullSource(data) {
+//get full source
+function getFullSource(data, id, currentElement) {
+    let html = htmlToString(currentElement)
+    let css = data.style.filter((e)=> {
+        return e.id === id
+    });
 
+    let js = data.script.filter((e)=> {
+        return e.id === id
+    });
+
+    let source = `
+        <style>${css[0].content}</style>
+        ${html}
+        <script>${js[0] === undefined ? '' : js[0].content}</script>
+        `;
+
+    return source;
 }

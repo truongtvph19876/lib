@@ -2,7 +2,6 @@ import db from "./db.json" assert {type: "json"}
 
 let items = document.querySelector('.items');
 let style =document.querySelector('style')
-console.log(scriptRender(db.script));
 export default scriptRender(db.script)
 style.innerText = styleRender(db.style)
 items.innerHTML = effectRender(db);
