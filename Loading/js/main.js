@@ -8,6 +8,7 @@ let note = document.querySelector('#note');
 let overlay = document.querySelector('.overlay');
 let paste = document.querySelector('#paste-note');
 let copy = document.querySelector('#copy-note');
+let deleteNote = document.querySelector('#delete-note');
 let textarea = document.querySelector('#textarea');
 let script =document.querySelector('#script')
 
@@ -50,4 +51,8 @@ paste.addEventListener('click', function(){
     
         textarea.innerText = result;
     })
+});
+
+deleteNote.addEventListener('click', function(e){
+    textarea.value = ''
 });
