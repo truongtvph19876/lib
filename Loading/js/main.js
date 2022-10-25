@@ -1,3 +1,7 @@
+let select = document.querySelector('#selectLib');
+
+
+
 let closeNote = document.querySelector('#close-note');
 let opennote = document.querySelector('#note-book');
 let note = document.querySelector('#note');

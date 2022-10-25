@@ -200,6 +200,28 @@
 
             },
             {
+                "id": 12,
+                "title": "Spin",
+                "classname": "spin-effect12",
+                "childElement": [
+                    "<div></div>",
+                    "<div></div>",
+                    "<div></div>",
+                    "<div></div>",
+                    "<div></div>",
+                    "<div></div>",
+                    "<div></div>",
+                    "<div></div>",
+                    "<div></div>",
+                    "<div></div>",
+                    "<div></div>",
+                    "<div></div>"
+                ],
+                "source": ["full", "html", "css"],
+                "framework": ["css", "tailwind"]
+
+            },
+            {
                 "id": 9,
                 "title": "Spin",
                 "classname": "spin-effect9",
@@ -218,28 +240,6 @@
                 "title": "Spin",
                 "classname": "spin-effect11",
                 "childElement": [
-                    "<div></div>"
-                ],
-                "source": ["full", "html", "css"],
-                "framework": ["css", "tailwind"]
-
-            },
-            {
-                "id": 12,
-                "title": "Spin",
-                "classname": "spin-effect12",
-                "childElement": [
-                    "<div></div>",
-                    "<div></div>",
-                    "<div></div>",
-                    "<div></div>",
-                    "<div></div>",
-                    "<div></div>",
-                    "<div></div>",
-                    "<div></div>",
-                    "<div></div>",
-                    "<div></div>",
-                    "<div></div>",
                     "<div></div>"
                 ],
                 "source": ["full", "html", "css"],

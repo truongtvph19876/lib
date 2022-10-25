@@ -1,3 +1,9 @@
+let select = document.querySelector('#selectLib');
+
+select.addEventListener('change', (e)=> {
+    console.log(e);
+})
+
 import db from "./db.json" assert {type: "json"}
 
 let copyBtn = document.querySelectorAll(".copyBtn");
@@ -32,7 +38,6 @@ function getValueId(data, id, value, currentElement) {
         filter = data.script.filter((e)=> {
             return e.id === id
         })
-       
     } else {
         console.log("something is wrong");
     }

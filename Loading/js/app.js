@@ -1,3 +1,6 @@
+let select = document.querySelector('#selectLib');
+
+
 import db from "./db.json" assert {type: "json"}
 
 let items = document.querySelector('.items');
