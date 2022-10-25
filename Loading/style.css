@@ -101,7 +101,7 @@ h2 {
     text-align: center;
     margin-bottom: 60px;
 }
-.item {
+/* .item {
     position: relative;
     width: calc(33.33% - 20px);
     height: 200px;
@@ -109,8 +109,41 @@ h2 {
     margin: 10px;
     border-radius: 10px;
     box-shadow: 5px 5px 10px #8360c3;
-}
+} */
 
+@media only screen and (max-width: 600px) {
+    .item {
+        position: relative;
+        width: calc(100% - 20px);
+        height: 200px;
+        background:linear-gradient(180deg,#8360c3, #2ebf91) ;
+        margin: 10px;
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px #8360c3;
+    }
+}
+@media only screen and (min-width: 600.1px) {
+    .item {
+        position: relative;
+        width: calc(50% - 20px);
+        height: 200px;
+        background:linear-gradient(180deg,#8360c3, #2ebf91) ;
+        margin: 10px;
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px #8360c3;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    .item {
+        position: relative;
+        width: calc(33.333% - 20px);
+        height: 200px;
+        background:linear-gradient(180deg,#8360c3, #2ebf91) ;
+        margin: 10px;
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px #8360c3;
+    }
+}
 
 /* spin loading2 */
 
